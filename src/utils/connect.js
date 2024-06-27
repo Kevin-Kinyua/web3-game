@@ -42,12 +42,12 @@ export const walletConnect = async () => {
       return alert("Connect to harmony devnet");
     }
 
-    await wcProvider.enable();
-    const provider = new providers.Web3Provider(wcProvider);
-    const { accounts } = wcProvider;
-    const res = await axios.post("/api/connect", {
-      address: accounts[0],
-    });
+    // await wcProvider.enable();
+    // const provider = new providers.Web3Provider(wcProvider);
+    // const { accounts } = wcProvider;
+    // const res = await axios.post("/api/connect", {
+    //   address: accounts[0],
+    // });
 
     window.provider = provider;
     return { address: accounts[0], newUser: res.data.data };

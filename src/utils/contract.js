@@ -7,9 +7,9 @@ console.log(wcProvider, window.ethereum);
 console.log(new providers.Web3Provider(wcProvider));
 const provider = window.ethereum
   ? new providers.Web3Provider(window.ethereum)
-  : // new providers.Web3Provider(new providers.getDefaultProvider());
-    // new wcProvider);
-    new providers.Web3Provider(wcProvider);
+  : new providers.Web3Provider(new providers.getDefaultProvider());
+    );
+    // new providers.Web3Provider(wcProvider);
 
 const signer = provider.getSigner();
 
