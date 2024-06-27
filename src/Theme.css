@@ -12,6 +12,7 @@
   --green: #0a5f62;
   --brown: #2f2320;
   --line: #254751;
+  --kevinkinyua: #4c63dc;
 }
 
 html {
@@ -20,7 +21,9 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: var(--bg);
+  
+  /* background-color: var(--bg); */ 
+  background-color: var(--kevinkinyua);
   color: var(--white);
   overflow-x: hidden;
 }
