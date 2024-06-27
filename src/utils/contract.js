@@ -1,13 +1,13 @@
 import MythToken from "../contract/abi/MythToken.json";
 import Myth from "../contract/abi/Myth.json";
-import { ethers, providers, utils } from "ethers";
+import { ethers, utils } from "ethers";
 import { wcProvider } from "./connect";
 
 console.log(wcProvider, window.ethereum);
-console.log(new providers.Web3Provider(wcProvider));
+console.log(new ethers.providers.Web3Provider(wcProvider)); 
 const provider = window.ethereum
-  ? new providers.Web3Provider(window.ethereum)
-  : new providers.Web3Provider(new providers.getDefaultProvider());
+  ? new ethers.providers.Web3Provider(window.ethereum)
+  : new ethers.providers.Web3Provider(wcProvider);
     );
     // new providers.Web3Provider(wcProvider);
 
